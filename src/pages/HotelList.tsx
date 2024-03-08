@@ -20,6 +20,7 @@ function HotelList() {
         loader={<>Loading...</>}
         next={loadMore}
         scrollThreshold="100px"
+        style={{ overflowY: 'hidden' }}
       >
         <ul>
           {hotels?.map((hotel, idx) => (
