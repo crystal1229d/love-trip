@@ -2,7 +2,7 @@ import Flex from '@shared/Flex'
 import Spacing from '@shared/Spacing'
 import Button from '@shared/Button'
 
-import useGoogleSignin from '@hooks/useGoogleSignin'
+import useGoogleSignin from '@hooks/auth/useGoogleSignin'
 
 function SigninPage() {
   const { signin } = useGoogleSignin()

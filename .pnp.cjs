@@ -60,6 +60,7 @@ const RAW_RUNTIME_STATE =
           ["react-query", "virtual:41f87a86f91dfe0919c82ade57ca877fb4e978f40238d105e1f7d8c7a039961ab85efbe19f2168c1e4b50a69dd698cbf56e2f451c18ddb237aff03910874f6f9#npm:3.39.3"],\
           ["react-router-dom", "virtual:41f87a86f91dfe0919c82ade57ca877fb4e978f40238d105e1f7d8c7a039961ab85efbe19f2168c1e4b50a69dd698cbf56e2f451c18ddb237aff03910874f6f9#npm:6.22.2"],\
           ["react-scripts", "virtual:41f87a86f91dfe0919c82ade57ca877fb4e978f40238d105e1f7d8c7a039961ab85efbe19f2168c1e4b50a69dd698cbf56e2f451c18ddb237aff03910874f6f9#npm:5.0.1"],\
+          ["recoil", "virtual:41f87a86f91dfe0919c82ade57ca877fb4e978f40238d105e1f7d8c7a039961ab85efbe19f2168c1e4b50a69dd698cbf56e2f451c18ddb237aff03910874f6f9#npm:0.7.7"],\
           ["remark-gfm", "npm:4.0.0"],\
           ["swiper", "npm:11.0.7"],\
           ["typescript", "patch:typescript@npm%3A4.9.5#optional!builtin<compat/typescript>::version=4.9.5&hash=289587"],\
@@ -9172,6 +9173,7 @@ const RAW_RUNTIME_STATE =
           ["react-query", "virtual:41f87a86f91dfe0919c82ade57ca877fb4e978f40238d105e1f7d8c7a039961ab85efbe19f2168c1e4b50a69dd698cbf56e2f451c18ddb237aff03910874f6f9#npm:3.39.3"],\
           ["react-router-dom", "virtual:41f87a86f91dfe0919c82ade57ca877fb4e978f40238d105e1f7d8c7a039961ab85efbe19f2168c1e4b50a69dd698cbf56e2f451c18ddb237aff03910874f6f9#npm:6.22.2"],\
           ["react-scripts", "virtual:41f87a86f91dfe0919c82ade57ca877fb4e978f40238d105e1f7d8c7a039961ab85efbe19f2168c1e4b50a69dd698cbf56e2f451c18ddb237aff03910874f6f9#npm:5.0.1"],\
+          ["recoil", "virtual:41f87a86f91dfe0919c82ade57ca877fb4e978f40238d105e1f7d8c7a039961ab85efbe19f2168c1e4b50a69dd698cbf56e2f451c18ddb237aff03910874f6f9#npm:0.7.7"],\
           ["remark-gfm", "npm:4.0.0"],\
           ["swiper", "npm:11.0.7"],\
           ["typescript", "patch:typescript@npm%3A4.9.5#optional!builtin<compat/typescript>::version=4.9.5&hash=289587"],\
@@ -11941,6 +11943,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["gzip-size", "npm:6.0.0"],\
           ["duplexer", "npm:0.1.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["hamt_plus", [\
+      ["npm:1.0.2", {\
+        "packageLocation": "../../../.yarn/berry/cache/hamt_plus-npm-1.0.2-67a52ee1df-10c0.zip/node_modules/hamt_plus/",\
+        "packageDependencies": [\
+          ["hamt_plus", "npm:1.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -18461,6 +18472,37 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["readdirp", "npm:3.6.0"],\
           ["picomatch", "npm:2.3.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["recoil", [\
+      ["npm:0.7.7", {\
+        "packageLocation": "../../../.yarn/berry/cache/recoil-npm-0.7.7-4452f58b67-10c0.zip/node_modules/recoil/",\
+        "packageDependencies": [\
+          ["recoil", "npm:0.7.7"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:41f87a86f91dfe0919c82ade57ca877fb4e978f40238d105e1f7d8c7a039961ab85efbe19f2168c1e4b50a69dd698cbf56e2f451c18ddb237aff03910874f6f9#npm:0.7.7", {\
+        "packageLocation": "./.yarn/__virtual__/recoil-virtual-73732e018f/4/.yarn/berry/cache/recoil-npm-0.7.7-4452f58b67-10c0.zip/node_modules/recoil/",\
+        "packageDependencies": [\
+          ["recoil", "virtual:41f87a86f91dfe0919c82ade57ca877fb4e978f40238d105e1f7d8c7a039961ab85efbe19f2168c1e4b50a69dd698cbf56e2f451c18ddb237aff03910874f6f9#npm:0.7.7"],\
+          ["@types/react", "npm:18.2.55"],\
+          ["@types/react-dom", "npm:18.2.19"],\
+          ["@types/react-native", null],\
+          ["hamt_plus", "npm:1.0.2"],\
+          ["react", "npm:18.2.0"],\
+          ["react-dom", "virtual:41f87a86f91dfe0919c82ade57ca877fb4e978f40238d105e1f7d8c7a039961ab85efbe19f2168c1e4b50a69dd698cbf56e2f451c18ddb237aff03910874f6f9#npm:18.2.0"],\
+          ["react-native", null]\
+        ],\
+        "packagePeers": [\
+          "@types/react-dom",\
+          "@types/react-native",\
+          "@types/react",\
+          "react-dom",\
+          "react-native",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\
