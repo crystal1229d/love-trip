@@ -1,13 +1,18 @@
 import { parse } from 'qs'
 import { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import useUser from '@hooks/auth/useUser'
 import useReservation from '@components/reservation/hooks/useReservation'
+import { makeReservation } from '@/remote/reservation'
 
 import Summary from '@components/reservation/Summary'
 import Spacing from '@shared/Spacing'
+import Form from '@/components/reservation/Form'
+import addDelimiter from '@/utils/addDelimiter'
 
 function ReservationPage() {
+  const navigate = useNavigate()
   const user = useUser()
 
   // 값 보장받기 : 이 값 중 하나라도 없는 경우 => 뒤로가기
@@ -43,6 +48,26 @@ function ReservationPage() {
 
   const { hotel, room } = data
 
+  const handleSubmit = async (formValues: { [key: string]: string }) => {
+    const newReservation = {
+      userId: user?.uid as string,
+      hotelId,
+      roomId,
+      startDate,
+      endDate,
+      price: room.price * Number(nights),
+      formValues,
+    }
+
+    await makeReservation(newReservation)
+
+    navigate(`/reservation/done?hotelName=${hotel.name}`)
+  }
+
+  const buttonLabel = `${nights}박 ${addDelimiter(
+    room.price * Number(nights),
+  )}원 예약하기`
+
   return (
     <div>
       <Summary
@@ -53,6 +78,11 @@ function ReservationPage() {
         nights={nights}
       />
       <Spacing size={8} backgroundColor="gray100" />
+      <Form
+        onSubmit={handleSubmit}
+        forms={hotel.forms}
+        buttonLabel={buttonLabel}
+      />
     </div>
   )
 }
