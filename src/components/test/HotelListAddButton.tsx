@@ -12,7 +12,7 @@ function random(min: number, max: number) {
 function HotelListAddButton() {
   const batch = writeBatch(store)
 
-  const handleButtonClick = () => {
+  const handleButtonClick = async () => {
     const hotels = HOTEL_NAMES.map((hotelName, idx) => {
       return {
         name: hotelName,
@@ -36,7 +36,9 @@ function HotelListAddButton() {
       })
     })
 
-    batch.commit()
+    await batch.commit()
+
+    alert('호텔리스트 추가 완료!')
   }
 
   return <Button onClick={handleButtonClick}>호텔 리스트 추가</Button>
